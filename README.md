@@ -97,7 +97,9 @@ Developed at Data Hackdays Bern with support from:
 
     Satromo – Harmonized Sentinel-2 data
 
-    Swiss Federal Office for the Environment (BAFU) – Forest data
+    Amt für Wald und Naturgefahren (AWN) – Challenge owner
+
+    Swiss Federal Office for the Environment (BAFU), Eidg. Forschungsanstalt WSL and swisstopo – expert guidance
 
     Google Earth Engine – Cloud-based geospatial analysis
 
