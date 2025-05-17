@@ -49,23 +49,23 @@ Core Analysis Steps:
 
 Outputs:
 
-    ✅ Median NBR before and after the event
+     Median NBR before and after the event
 
-    ✅ dNBR layer showing vegetation change
+     dNBR layer showing vegetation change
 
-    ✅ Disturbance mask (dNBR ≤ -0.15) highlighting severe impact zones
+     Disturbance mask (dNBR ≤ -0.15) highlighting severe impact zones
 
-## 🧰 Tech Stack
+##  Tech Stack
 
-    🌐 Google Earth Engine (data analysis & visualization)
+     Google Earth Engine (data analysis & visualization)
 
-    🛰️ Sentinel-2 imagery (via [swissEO S2-SR](https://www.swisstopo.admin.ch/de/satellitenbilder-swisseo-s2-sr))
+     Sentinel-2 imagery (via [swissEO S2-SR](https://www.swisstopo.admin.ch/de/satellitenbilder-swisseo-s2-sr))
 
-    🧠 Forest & snow masking (Swiss federal data)
+     Forest & snow masking (Swiss federal data)
 
-    ⚛️ React frontend (using Lovable)
+     React frontend (using Lovable)
 
-## 📦 App Usage
+##  App Usage
 
 Visit the App and follow these steps:
 
@@ -92,10 +92,9 @@ Color Meaning
     Works best in Summer, not good during wintertime
 
 ## 📁 File Structure (Important Components)
+gee_nbr_app.js — GEE script with NBR logic, cloud/snow masking
 
-    gee_nbr_app.js — GEE script with NBR logic, cloud/snow masking, UIBased on your README content for the WINDWURF project, I'll create a comprehensive "Next Steps" section that fits with your existing markdown document. Here's a well-formatted section to add:
-
-## 🚀 Next Steps & Future Development
+## Next Steps & Future Development
 
 The WINDWURF project has established a solid foundation for storm damage detection in Swiss forests, but several enhancements could further increase its value for forest management:
 
