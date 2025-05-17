@@ -33,7 +33,7 @@ const Index = () => {
       className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
       style={{
         
-        backgroundImage: "url('wald.jpg')",
+        backgroundImage: "url('dist/assets/wald.jpg')",
         opacity: 0.3, // Adjust this value to dim more or less
         zIndex: 0,
       }}
