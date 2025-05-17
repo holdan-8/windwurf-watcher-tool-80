@@ -10,13 +10,13 @@ With storms intensifying over the last 50 years, detecting forest damage efficie
 
 ## 🚀 What It Does
 
-After a storm event, WINDWURF allows users to[
+After a storm event, WINDWURF allows users to
 
-    Select a date of a storm event
+- Select a date of a storm event
 
-    Automatically get potential forest damage by compare satellite imagery before and after the event
+- Automatically get potential forest damage by compare satellite imagery before and after the event
 
-    Highlight forest areas with significant vegetation loss (potential storm damage)
+- Highlight forest areas with significant vegetation loss (potential storm damage)
 
 The result: a fast, data-driven overview of potentially affected forest regions.
 
