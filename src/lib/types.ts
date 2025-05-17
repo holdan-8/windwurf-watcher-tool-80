@@ -5,3 +5,8 @@ export interface SatellitePass {
   orbit: string;
   platform: string;
 }
+
+export interface Language {
+  code: "de" | "fr";
+  name: string;
+}
