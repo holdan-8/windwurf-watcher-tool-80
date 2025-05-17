@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
 
       <div className="text-right mt-4">
         <button
-          className="text-green-700 hover:underline"
+          className="text-green-800 hover:underline"
           onClick={() => setShowImpressum(false)}
         >
           Schließen

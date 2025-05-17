@@ -33,7 +33,7 @@ const Index = () => {
       className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
       style={{
         
-        backgroundImage: "url('windwurf-watcher-tool-80/src/assets/wald.jpg')",
+        backgroundImage: "url('wald.jpg')",
         opacity: 0.3, // Adjust this value to dim more or less
         zIndex: 0,
       }}
@@ -53,7 +53,7 @@ const Index = () => {
           <div>
             {loading ? (
             <div className="h-48 flex items-center justify-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-700"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-800"></div>
             </div>
             ) : (
             <SatelliteCalendar passes={satellitePasses} />
