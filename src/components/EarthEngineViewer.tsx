@@ -14,9 +14,7 @@ const EarthEngineViewer: React.FC = () => {
         ></iframe>
       </div>
       <div className="mt-2 flex items-center">
-        <div className="w-6 h-6 bg-[#fce903] mr-2"></div>
-        <span>Potentielle Sturmschäden / Dommages potentiels causés par la tempête</span>
-      </div>
+            </div>
     </div>
   );
 };

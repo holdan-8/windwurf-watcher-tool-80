@@ -2,6 +2,8 @@
 import React from "react";
 import { format, addDays } from "date-fns";
 import { SatellitePass } from "@/lib/types";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Car } from "lucide-react";
 
 interface SatelliteCalendarProps {
   passes: SatellitePass[];
@@ -20,7 +22,14 @@ const SatelliteCalendar: React.FC<SatelliteCalendarProps> = ({ passes }) => {
   };
 
   return (
-    <div className="grid grid-cols-7 gap-2">
+    
+    <Card>
+       <CardHeader className="bg-green-50">
+        <div className="flex justify-between">
+      <CardTitle>Nächste Satellitenüberflüge</CardTitle>
+        </div>
+      </CardHeader>
+      <CardContent className="grid grid-cols-7 gap-2">
       {nextSevenDays.map((date, index) => {
         const dayPasses = getPassesForDate(date);
         return (
@@ -52,7 +61,8 @@ const SatelliteCalendar: React.FC<SatelliteCalendarProps> = ({ passes }) => {
           </div>
         );
       })}
-    </div>
+      </CardContent>
+    </Card>
   );
 };
 
