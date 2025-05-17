@@ -11,24 +11,6 @@ const Footer: React.FC = () => {
               &copy; {new Date().getFullYear()} WINDWURF Projekt
             </p>
           </div>
-          <div className="flex space-x-4">
-            <a
-              href="https://hack.data-hackdays-be.ch/project/60"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-200 hover:text-white"
-            >
-              Data Hackdays Challenge
-            </a>
-            <a
-              href="https://github.com/holdan-8/windwurf-watcher-tool-80"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-200 hover:text-white"
-            >
-              GitHub
-            </a>
-          </div>
         </div>
       </div>
     </footer>
