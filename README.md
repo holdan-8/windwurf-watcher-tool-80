@@ -1,73 +1,106 @@
-# Welcome to your Lovable project
+🌲 WINDWURF – Storm Damage Detection in Swiss Forests
 
-## Project info
+WINDWURF is an interactive tool to rapidly assess storm damage in Swiss forests using openly available Sentinel-2 satellite imagery. Developed during Data Hackdays Bern, this project helps the Amt für Wald und Naturgefahren (AWN) get timely insight into storm-related forest disturbances over 180,000 hectares of woodland — an area too vast for field inspection alone.
+🚀 What It Does
 
-**URL**: https://lovable.dev/projects/da2badd4-c270-47e4-b771-0aadae253344
+After a storm event, WINDWURF allows users to:
 
-## How can I edit this code?
+    Select a date of a storm event
 
-There are several ways of editing your application.
+    Automatically compare satellite imagery before and after the event
 
-**Use Lovable**
+    Highlight forest areas with significant vegetation loss (potential storm damage)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/da2badd4-c270-47e4-b771-0aadae253344) and start prompting.
+The result: a fast, data-driven overview of potentially affected forest regions.
 
-Changes made via Lovable will be committed automatically to this repo.
+🛰️ How It Works
 
-**Use your preferred IDE**
+WINDWURF is powered by Google Earth Engine (GEE) and utilizes Sentinel-2 imagery processed with a pixel-wise dNBR (delta Normalized Burn Ratio) analysis.
+Core Analysis Steps:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+    NBR Calculation:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+        NBR = (B8A - B11) / (B8A + B11)
 
-Follow these steps:
+        Computed for pre- and post-storm periods
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    dNBR Calculation:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+        dNBR = NBR_post - NBR_pre
 
-# Step 3: Install the necessary dependencies.
-npm i
+        Significant vegetation loss → low dNBR values (≤ -0.15)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+    Filtering & Masking:
 
-**Edit a file directly in GitHub**
+        Swiss-harmonized Sentinel-2 data
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+        Forest-only mask (Swiss BAFU ecosystem data)
 
-**Use GitHub Codespaces**
+        Custom 10m cloud and terrain shadow masks
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+        Snow masking using NDSI
 
-## What technologies are used for this project?
+Outputs:
 
-This project is built with:
+    ✅ Median NBR before and after the event
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+    ✅ dNBR layer showing vegetation change
 
-## How can I deploy this project?
+    ✅ Disturbance mask (dNBR ≤ -0.15) highlighting severe impact zones
 
-Simply open [Lovable](https://lovable.dev/projects/da2badd4-c270-47e4-b771-0aadae253344) and click on Share -> Publish.
+🧰 Tech Stack
 
-## Can I connect a custom domain to my Lovable project?
+    🌐 Google Earth Engine (data analysis & visualization)
 
-Yes, you can!
+    🛰️ Sentinel-2 imagery (via Satromo collections)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+    🧠 Forest & snow masking (Swiss federal data)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+    ⚛️ React frontend (using Lovable)
+
+📦 App Usage
+
+Visit the App and follow these steps:
+
+    Wählen Sie das Datum des Sturmereignisses im linken Panel.
+
+    Die Karte wird automatisch aktualisiert. Gelbe Flächen zeigen potentielle Sturmschäden.
+
+    Zoomen und verschieben Sie die Karte für eine genauere Ansicht.
+
+📊 Legend
+Color Meaning
+🔴 Red Decreased NBR (potential disturbance)
+🔵 Blue Increased NBR
+🟤 Dark Red Severe forest disturbance (dNBR ≤ -0.15)
+📅 Notes
+
+    60-day comparison window post-storm
+
+    Compared to same window from previous year
+
+    Only forests are analyzed
+
+    Disturbance areas appear in red on delta map
+
+📁 File Structure (Important Components)
+
+    gee/ — GEE script with NBR logic, cloud/snow masking, UI
+
+    frontend/ — React app using Lovable setup
+
+    assets/ — Swiss data layers (forest mask, boundaries)
+
+👥 Team & Acknowledgments
+
+Developed at Data Hackdays Bern with support from:
+
+    Satromo – Harmonized Sentinel-2 data
+
+    Swiss Federal Office for the Environment (BAFU) – Forest data
+
+    Google Earth Engine – Cloud-based geospatial analysis
+
+🪵 Why WINDWURF?
+
+With storms intensifying over the last 50 years, detecting forest damage efficiently is critical for mitigation, logging decisions, and ecological monitoring. WINDWURF empowers authorities with a scalable, transparent, and reproducible approach to disaster response.
