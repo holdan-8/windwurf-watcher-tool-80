@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               Data Hackdays Challenge
             </a>
             <a
-              href="https://holdan-8.github.io/Windwurf/"
+              href="https://github.com/holdan-8/windwurf-watcher-tool-80"
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-200 hover:text-white"

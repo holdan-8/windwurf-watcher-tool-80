@@ -52,7 +52,7 @@ const ProjectInfo: React.FC = () => {
               <Button 
                 variant="outline"
                 className="bg-green-50 hover:bg-green-100"
-                onClick={() => window.open("https://holdan-8.github.io/Windwurf/", "_blank")}
+                onClick={() => window.open("https://github.com/holdan-8/windwurf-watcher-tool-80/", "_blank")}
               >
                 GitHub Repository
               </Button>
