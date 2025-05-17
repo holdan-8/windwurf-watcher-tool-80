@@ -40,7 +40,7 @@ const SatelliteCalendar: React.FC<SatelliteCalendarProps> = ({ passes }) => {
                   <img
                     src={`https://cms.geo.admin.ch/Topo/umweltbeobachtung/swisseo/assets/${pass.orbit}.png`}
                     alt={`Orbit ${pass.orbit}`}
-                    className="w-6 h-6"
+                    className="w-6 object-contain"
                   />
                   <span className="text-xs">{pass.platform}</span>
                 </div>
