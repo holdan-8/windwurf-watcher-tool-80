@@ -32,7 +32,8 @@ const Index = () => {
       <div
       className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
       style={{
-        backgroundImage: "url('src/assets/wald.jpg')",
+        
+        backgroundImage: "url('windwurf-watcher-tool-80/src/assets/wald.jpg')",
         opacity: 0.3, // Adjust this value to dim more or less
         zIndex: 0,
       }}
