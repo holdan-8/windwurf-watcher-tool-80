@@ -1,6 +1,11 @@
 🌲 WINDWURF – Storm Damage Detection in Swiss Forests
 
 WINDWURF is an interactive tool to rapidly assess storm damage in Swiss forests using openly available Sentinel-2 satellite imagery provided via the swisstopo [swissEO S2-SR](https://www.swisstopo.admin.ch/de/satellitenbilder-swisseo-s2-sr) Product. Developed during [Data Hackdays Bern 2025](https://hack.data-hackdays-be.ch/project/60), this project helps the Amt für Wald und Naturgefahren (AWN) get timely insight into storm-related forest disturbances over 180,000 hectares of woodland — an area too vast for field inspection alone.
+
+🪵 Why WINDWURF?
+
+With storms intensifying over the last 50 years, detecting forest damage efficiently is critical for mitigation, logging decisions, and ecological monitoring. WINDWURF empowers authorities with a scalable, transparent, and reproducible approach to disaster response.
+
 🚀 What It Does
 
 After a storm event, WINDWURF allows users to[
@@ -71,6 +76,7 @@ Visit the App and follow these steps:
 📊 Legend
 Color Meaning
 🟡 Potential forest damage (dNBR ≤ -0.15)
+
 📅 Notes
 
     60-day comparison window post-storm
@@ -83,26 +89,49 @@ Color Meaning
 
 📁 File Structure (Important Components)
 
-    gee/ — GEE script with NBR logic, cloud/snow masking, UI
+    gee_nbr_app.js — GEE script with NBR logic, cloud/snow masking, UIBased on your README content for the WINDWURF project, I'll create a comprehensive "Next Steps" section that fits with your existing markdown document. Here's a well-formatted section to add:
 
-    frontend/ — React app using Lovable setup
+🚀 Next Steps & Future Development
 
-    assets/ — Swiss data layers (forest mask, boundaries)
+The WINDWURF project has established a solid foundation for storm damage detection in Swiss forests, but several enhancements could further increase its value for forest management:
+
+Quantitative Analysis Features
+- Area Measurement Tool: Implement functionality to calculate the total affected area in hectares for selected regions
+- Economic Impact Assessment: Develop an algorithm to estimate financial damage (CHF) based on:
+  - Average timber value per hectare
+  - Severity of damage (using dNBR thresholds)
+  - Forest type classification
+
+Historical Analysis
+- Storm Event Database: Create a pulldown menu of historical storm events in Switzerland
+- Temporal Comparison: Enable comparison between current and past storm impacts on the same forest areas
+- Long-term Trend Analysis: Visualize changing patterns of storm vulnerability across decades
+
+Enhanced Visualization
+- Damage Severity Classification: Implement a multi-level classification system beyond binary damage detection
+- 3D Visualization: Integrate with swissSURFACE3D for topographic analysis of damage patterns
+- Time-lapse Feature: Show forest recovery progress over time after storm events
+
+Data Integration
+- Field Validation Module: Allow foresters to upload ground-truth data to improve algorithm accuracy
+- Integration with Weather Data: Correlate damage patterns with wind speed and direction data
+- Automated Reporting: Generate PDF reports with statistics for affected forest management units
+
+The implementation of these features would transform WINDWURF from a detection tool into a comprehensive forest storm damage management system, supporting the entire workflow from initial assessment to recovery planning.
+
 
 👥 Team & Acknowledgments
 
 Developed at Data Hackdays Bern with support from:
 
-    Swisstopo – Harmonized Sentinel-2 data - [Tschoun GitHub Profile](https://github.com/Tschoun),[davidoesch GitHub Profile](https://github.com/davidoesch)
+- Swisstopo – Harmonized Sentinel-2 data - [Tschoun](https://github.com/Tschoun),[davidoesch](https://github.com/davidoesch)
 
-    Amt für Wald und Naturgefahren (AWN) – Challenge owner [nnja GitHub Profile](https://github.com/nnja), Dani Steinberger
+- Amt für Wald und Naturgefahren (AWN) – Challenge owner [nnjae](https://github.com/nnja), Dani Steinberger
 
-    Swiss Federal Office for the Environment (BAFU) -expert guidance [Rdataflow GitHub Profile](https://github.com/Rdataflow), Yannick Barton
+- Swiss Federal Office for the Environment (BAFU) -expert guidance [Rdataflow](https://github.com/Rdataflow), Yannick Barton
     
-    Eidg. Forschungsanstalt WSL and swisstopo – expert guidance and SAR Wrestling Marius Rüetschi
+- Eidg. Forschungsanstalt WSL and swisstopo – expert guidance and SAR Wrestling Marius Rüetschi
 
-    BFH Institut Public Sector Transformation - FullStack! (holdan-8 GitHub Profile](https://github.com/holdan-8)
+- BFH Institut Public Sector Transformation - FullStack! [holdan-8](https://github.com/holdan-8)
 
-🪵 Why WINDWURF?
 
-With storms intensifying over the last 50 years, detecting forest damage efficiently is critical for mitigation, logging decisions, and ecological monitoring. WINDWURF empowers authorities with a scalable, transparent, and reproducible approach to disaster response.
