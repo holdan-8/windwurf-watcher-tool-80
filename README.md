@@ -131,7 +131,7 @@ Developed at Data Hackdays Bern with support from:
 
 - Swisstopo – Harmonized Sentinel-2 data - [Tschoun](https://github.com/Tschoun),[davidoesch](https://github.com/davidoesch)
 
-- Amt für Wald und Naturgefahren (AWN) – Challenge owner [nnjae](https://github.com/nnja), Dani Steinberger
+- Amt für Wald und Naturgefahren (AWN) – Challenge owner [nninnja](https://github.com/nninnja), Dani Steinberger
 
 - Swiss Federal Office for the Environment (BAFU) -expert guidance [Rdataflow](https://github.com/Rdataflow), Yannick Barton
     
